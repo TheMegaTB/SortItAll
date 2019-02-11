@@ -14,4 +14,8 @@ let sortedArray = Array((0...arrayLength))
 let reverseSortedArray = Array(sortedArray.reversed())
 let randomArray = Array(sortedArray.shuffled())
 
-measureRuntime(of: reverseSortedArray.sorted(with: BogoSort()))
+print(randomArray)
+let s = measureRuntime(of: BubbleSort().sort(randomArray))
+print(s)
+
+//measureRuntime(of: reverseSortedArray.sorted(with: BogoSort()))

@@ -13,6 +13,7 @@
 		30AE56EA22118AAC0062CCCF /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56E922118AAC0062CCCF /* Measurements.swift */; };
 		30AE56ED22118AC50062CCCF /* BogoSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56EC22118AC50062CCCF /* BogoSort.swift */; };
 		30AE56EF22118AED0062CCCF /* SortingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56EE22118AED0062CCCF /* SortingAlgorithm.swift */; };
+		40B024EF22118DEC004F735B /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024EE22118DEC004F735B /* BubbleSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		30AE56E922118AAC0062CCCF /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
 		30AE56EC22118AC50062CCCF /* BogoSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BogoSort.swift; sourceTree = "<group>"; };
 		30AE56EE22118AED0062CCCF /* SortingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingAlgorithm.swift; sourceTree = "<group>"; };
+		40B024EE22118DEC004F735B /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,9 @@
 		30AE56EB22118ABA0062CCCF /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				30AE56EC22118AC50062CCCF /* BogoSort.swift */,
 				30AE56EE22118AED0062CCCF /* SortingAlgorithm.swift */,
+				30AE56EC22118AC50062CCCF /* BogoSort.swift */,
+				40B024EE22118DEC004F735B /* BubbleSort.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				30AE56EA22118AAC0062CCCF /* Measurements.swift in Sources */,
 				30AE56E822118A7D0062CCCF /* Array+SortWithAlgorithm.swift in Sources */,
 				30AE56ED22118AC50062CCCF /* BogoSort.swift in Sources */,
+				40B024EF22118DEC004F735B /* BubbleSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +284,11 @@
 		30AE56E2221187120062CCCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LQWS3ZT7UK;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -290,9 +296,11 @@
 		30AE56E3221187120062CCCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LQWS3ZT7UK;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
