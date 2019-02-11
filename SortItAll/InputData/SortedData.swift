@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct SortedData: InputData {
-    typealias Element = Int
-
-    let name = "Sorted"
-
-    func next(withSize size: Int) -> [Int] {
-        return Array((0..<size))
+class SortedData<Element: BinaryInteger>: InputData<Element> where Element.Stride: SignedInteger {
+    init() {
+        super.init(name: "Sorted") { size in
+            return Array((0..<Element(size)))
+        }
     }
 }

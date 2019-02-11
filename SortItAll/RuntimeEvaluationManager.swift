@@ -8,21 +8,21 @@
 
 import Foundation
 
-class RuntimeEvaluationManager<Data: InputData> {
+class RuntimeEvaluationManager<Element: Comparable> {
     private let dataSize: Int
     private let runCount: Int
 
     private let algorithms: [SortingAlgorithm]
-    private let inputData: [Data]
+    private let inputData: [InputData<Element>]
 
-    init(dataSize: Int, runCount: Int, algorithms: [SortingAlgorithm], dataTypes: [Data]) {
+    init(dataSize: Int, runCount: Int, algorithms: [SortingAlgorithm], dataTypes: [InputData<Element>]) {
         self.dataSize = dataSize
         self.runCount = runCount
         self.algorithms = algorithms
         self.inputData = dataTypes
     }
 
-    private func evaluatePerformance(forInput data: [Data.Element]) -> [TimeInterval] {
+    private func evaluatePerformance(forInput data: [Element]) -> [TimeInterval] {
         return algorithms.map { algorithm in
             print("\t\t\(algorithm.name)")
             let (resultData, duration) = measureRuntime(of: algorithm.sort(data))
@@ -31,7 +31,7 @@ class RuntimeEvaluationManager<Data: InputData> {
         }
     }
 
-    private func evaluateAveragePerformance(forInput data: Data) -> [TimeInterval] {
+    private func evaluateAveragePerformance(forInput data: InputData<Element>) -> [TimeInterval] {
         let cumulatedPerformance = (0..<runCount).reduce(Array(repeating: 0.0, count: algorithms.count)) { acc, i in
             print("\tRun #\(i)")
             let performances = evaluatePerformance(forInput: data.next(withSize: dataSize))

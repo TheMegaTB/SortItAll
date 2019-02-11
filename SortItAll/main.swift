@@ -9,9 +9,9 @@
 import Foundation
 
 let algorithms: [SortingAlgorithm] = [BubbleSort(), SelectionSort(), InsertionSort(), MergeSort()]
-let dataTypes = [ReverseSortedData()]
+let dataTypes: [InputData<Int>] = [ReverseSortedData(), SortedData(), RandomData()]
 
-let rem = RuntimeEvaluationManager(dataSize: 100, runCount: 50, algorithms: algorithms, dataTypes: dataTypes)
+let rem = RuntimeEvaluationManager(dataSize: 10, runCount: 50, algorithms: algorithms, dataTypes: dataTypes)
 let durations = rem.evaluate()
 
 let csvWriter = CSVWriter(columnNames: algorithms.map { $0.name }, rowNames: dataTypes.map { $0.name }, data: durations)
