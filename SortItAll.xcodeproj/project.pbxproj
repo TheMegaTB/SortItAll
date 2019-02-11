@@ -17,6 +17,9 @@
 		30AE56FC2211A92E0062CCCF /* Array+IsSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56E522118A640062CCCF /* Array+IsSorted.swift */; };
 		30AE56FD2211A92E0062CCCF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56DD221187120062CCCF /* main.swift */; };
 		30AE56FE2211A92E0062CCCF /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56E922118AAC0062CCCF /* Measurements.swift */; };
+		30AE57002211AB770062CCCF /* Array+AddElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56FF2211AB770062CCCF /* Array+AddElements.swift */; };
+		30AE57022211AF1F0062CCCF /* RuntimeEvaluationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE57012211AF1F0062CCCF /* RuntimeEvaluationManager.swift */; };
+		30AE57042211AF590062CCCF /* CSVWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE57032211AF590062CCCF /* CSVWriter.swift */; };
 		40B024EF22118DEC004F735B /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024EE22118DEC004F735B /* BubbleSort.swift */; };
 		40B024F322118FE9004F735B /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024F222118FE9004F735B /* SelectionSort.swift */; };
 		40B024F5221190B9004F735B /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024F4221190B9004F735B /* InsertionSort.swift */; };
@@ -47,6 +50,9 @@
 		30AE56F52211944C0062CCCF /* SortedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedData.swift; sourceTree = "<group>"; };
 		30AE56F72211945E0062CCCF /* ReverseSortedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseSortedData.swift; sourceTree = "<group>"; };
 		30AE56F92211946B0062CCCF /* RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
+		30AE56FF2211AB770062CCCF /* Array+AddElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+AddElements.swift"; sourceTree = "<group>"; };
+		30AE57012211AF1F0062CCCF /* RuntimeEvaluationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeEvaluationManager.swift; sourceTree = "<group>"; };
+		30AE57032211AF590062CCCF /* CSVWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWriter.swift; sourceTree = "<group>"; };
 		40B024EE22118DEC004F735B /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		40B024F222118FE9004F735B /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
 		40B024F4221190B9004F735B /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
@@ -88,6 +94,8 @@
 				30AE56E422118A570062CCCF /* Extensions */,
 				30AE56DD221187120062CCCF /* main.swift */,
 				30AE56E922118AAC0062CCCF /* Measurements.swift */,
+				30AE57012211AF1F0062CCCF /* RuntimeEvaluationManager.swift */,
+				30AE57032211AF590062CCCF /* CSVWriter.swift */,
 			);
 			path = SortItAll;
 			sourceTree = "<group>";
@@ -97,6 +105,7 @@
 			children = (
 				30AE56E522118A640062CCCF /* Array+IsSorted.swift */,
 				30AE56F022118E880062CCCF /* TimeInterval+HumanReadable.swift */,
+				30AE56FF2211AB770062CCCF /* Array+AddElements.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,8 +193,11 @@
 			files = (
 				30AE56FC2211A92E0062CCCF /* Array+IsSorted.swift in Sources */,
 				30AE56FD2211A92E0062CCCF /* main.swift in Sources */,
+				30AE57002211AB770062CCCF /* Array+AddElements.swift in Sources */,
+				30AE57042211AF590062CCCF /* CSVWriter.swift in Sources */,
 				30AE56FE2211A92E0062CCCF /* Measurements.swift in Sources */,
 				30AE56FB2211A9270062CCCF /* SortingAlgorithm.swift in Sources */,
+				30AE57022211AF1F0062CCCF /* RuntimeEvaluationManager.swift in Sources */,
 				30AE56F62211944C0062CCCF /* SortedData.swift in Sources */,
 				30AE56F122118E880062CCCF /* TimeInterval+HumanReadable.swift in Sources */,
 				30AE56FA2211946B0062CCCF /* RandomData.swift in Sources */,

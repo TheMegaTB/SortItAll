@@ -10,7 +10,7 @@ import Foundation
 
 class RandomData<Element: BinaryInteger>: InputData<Element> where Element.Stride: SignedInteger {
     init() {
-        super.init(name: "Sorted") { size in
+        super.init(name: "Random") { size in
             return Array((0..<Element(size))).shuffled()
         }
     }
