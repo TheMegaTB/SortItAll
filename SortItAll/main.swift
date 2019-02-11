@@ -15,7 +15,7 @@ let reverseSortedArray = Array(sortedArray.reversed())
 let randomArray = Array(sortedArray.shuffled())
 
 print(randomArray)
-let s = measureRuntime(of: SelectionSort().sort(randomArray))
+let s = measureRuntime(of: InsertionSort().sort(randomArray))
 print(s)
 
 //measureRuntime(of: reverseSortedArray.sorted(with: BogoSort()))
