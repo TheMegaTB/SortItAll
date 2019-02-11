@@ -9,19 +9,10 @@
 import Foundation
 
 @discardableResult
-func measureRuntime<B>(of function: @autoclosure () -> B) -> (returnValue: B, duration: TimeInterval) {
+func measureRuntime(of function: @autoclosure () -> Void) -> TimeInterval {
     let startTime = Date()
-    let returnValue = function()
+    function()
     let duration = Date().timeIntervalSince(startTime)
 
-    return (returnValue: returnValue, duration: duration)
-}
-
-@discardableResult
-func measureAverageRuntime<B>(of function: @autoclosure () -> B, withRuns: Int) -> TimeInterval {
-    let totalDuration = (0...withRuns).reduce(0) { (acc, _) in
-        return acc + measureRuntime(of: function).duration
-    }
-
-    return totalDuration / Double(withRuns)
+    return duration
 }

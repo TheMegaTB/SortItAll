@@ -14,6 +14,6 @@ extension Array where Element: Comparable {
             let (sorted, previousElement) = acc
             let isSorted = sorted && previousElement.flatMap { $0 <= currentElement } ?? true
             return (isSorted, currentElement)
-            }.0
+        }.0
     }
 }

@@ -24,8 +24,9 @@ class RuntimeEvaluationManager<Element: Comparable> {
 
     private func evaluatePerformance(forInput data: [Element]) -> [TimeInterval] {
         return algorithms.map { algorithm in
-            let (resultData, duration) = measureRuntime(of: algorithm.sort(data))
-            assert(resultData.isSorted(), "\(algorithm.name) failed to produce expected output data.")
+            var copy = data
+            let duration = measureRuntime(of: algorithm.sort(&copy))
+            assert(copy.isSorted(), "\(algorithm.name) failed to produce expected output data.")
             return duration
         }
     }
@@ -39,5 +40,5 @@ class RuntimeEvaluationManager<Element: Comparable> {
 
 let algorithms: [SortingAlgorithm] = [BubbleSort(), SelectionSort(), InsertionSort(), MergeSort()]
 let dataTypes: [InputData<Int>] = [ReverseSortedData(), SortedData(), RandomData()]
-let rem = RuntimeEvaluationManager(dataSize: 550, runCount: 500, algorithms: algorithms, dataTypes: dataTypes)
+let rem = RuntimeEvaluationManager(dataSize: 500, runCount: 500, algorithms: algorithms, dataTypes: dataTypes)
 rem.evaluate()

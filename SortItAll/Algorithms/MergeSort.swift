@@ -8,13 +8,17 @@
 
 import Foundation
 
-struct MergeSort: InplaceSortingAlgorithm {
+struct MergeSort: SortingAlgorithm {
     let name = "MergeSort"
 
-    func sortInplace<T>(_ array: inout [T]) where T : Comparable {
+    func sort<Element: Comparable>(_ array: inout [Element]) {
         if array.count > 1 {
-            let arrayB = sort(Array(array[...(array.count/2 - 1)]))
-            let arrayC = sort(Array(array[(array.count/2)...]))
+            var arrayB = Array(array[...(array.count/2 - 1)])
+            var arrayC = Array(array[(array.count/2)...])
+
+            sort(&arrayB)
+            sort(&arrayC)
+
             merge(arrayB, arrayC, &array)
         }
     }

@@ -8,10 +8,12 @@
 
 import Foundation
 
-struct BogoSort: InplaceSortingAlgorithm {
+struct BogoSort: SortingAlgorithm {
     let name = "BogoSort"
 
-    func sortInplace<T>(_ array: inout [T]) where T : Comparable {
-        while !array.isSorted() { array.shuffle() }
+    func sort<Element: Comparable>(_ array: inout [Element]) {
+        while !array.isSorted() {
+            array.shuffle()
+        }
     }
 }

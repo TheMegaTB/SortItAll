@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30AE56E822118A7D0062CCCF /* Array+SortWithAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56E722118A7D0062CCCF /* Array+SortWithAlgorithm.swift */; };
 		30AE56ED22118AC50062CCCF /* BogoSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56EC22118AC50062CCCF /* BogoSort.swift */; };
 		30AE56F122118E880062CCCF /* TimeInterval+HumanReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56F022118E880062CCCF /* TimeInterval+HumanReadable.swift */; };
 		30AE56F42211924C0062CCCF /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56F32211924C0062CCCF /* InputData.swift */; };
@@ -40,7 +39,6 @@
 		30AE56DA221187120062CCCF /* SortItAll */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SortItAll; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AE56DD221187120062CCCF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		30AE56E522118A640062CCCF /* Array+IsSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+IsSorted.swift"; sourceTree = "<group>"; };
-		30AE56E722118A7D0062CCCF /* Array+SortWithAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SortWithAlgorithm.swift"; sourceTree = "<group>"; };
 		30AE56E922118AAC0062CCCF /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
 		30AE56EC22118AC50062CCCF /* BogoSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BogoSort.swift; sourceTree = "<group>"; };
 		30AE56EE22118AED0062CCCF /* SortingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingAlgorithm.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				30AE56E522118A640062CCCF /* Array+IsSorted.swift */,
-				30AE56E722118A7D0062CCCF /* Array+SortWithAlgorithm.swift */,
 				30AE56F022118E880062CCCF /* TimeInterval+HumanReadable.swift */,
 			);
 			path = Extensions;
@@ -195,7 +192,6 @@
 				40B024F5221190B9004F735B /* InsertionSort.swift in Sources */,
 				40B024F72211919A004F735B /* MergeSort.swift in Sources */,
 				40B024F322118FE9004F735B /* SelectionSort.swift in Sources */,
-				30AE56E822118A7D0062CCCF /* Array+SortWithAlgorithm.swift in Sources */,
 				30AE56ED22118AC50062CCCF /* BogoSort.swift in Sources */,
 				30AE56F82211945E0062CCCF /* ReverseSortedData.swift in Sources */,
 				30AE56F42211924C0062CCCF /* InputData.swift in Sources */,

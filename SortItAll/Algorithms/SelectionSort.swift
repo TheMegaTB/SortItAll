@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct SelectionSort: InplaceSortingAlgorithm {
+struct SelectionSort: SortingAlgorithm {
     let name = "SelectionSort"
 
-    func sortInplace<T>(_ array: inout [T]) where T : Comparable {
+    func sort<Element: Comparable>(_ array: inout [Element]) {
         for i in 0...array.count - 2  {
             var min = i
             for j in i + 1...array.count - 1 {
