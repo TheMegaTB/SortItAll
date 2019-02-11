@@ -29,8 +29,15 @@ class RuntimeEvaluationManager<Data: InputData> {
             return duration
         }
     }
+
+    func evaluate() {
+        inputData.forEach { data in
+            _ = evaluatePerformance(forInput: data.next(withSize: dataSize))
+        }
+    }
 }
 
 let algorithms = [BubbleSort()]
-let dataTypes = [SortedData()]
+let dataTypes = [ReverseSortedData()]
 let rem = RuntimeEvaluationManager(dataSize: 50, runCount: 500, algorithms: algorithms, dataTypes: dataTypes)
+rem.evaluate()
