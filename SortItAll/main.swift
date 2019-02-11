@@ -8,14 +8,29 @@
 
 import Foundation
 
-let arrayLength = 10
+class RuntimeEvaluationManager<Data: InputData> {
+    private let dataSize: Int
+    private let runCount: Int
 
-let sortedArray = Array((0...arrayLength))
-let reverseSortedArray = Array(sortedArray.reversed())
-let randomArray = Array(sortedArray.shuffled())
+    private let algorithms: [SortingAlgorithm]
+    private let inputData: [Data]
 
-print(randomArray)
-let s = measureRuntime(of: BubbleSort().sort(randomArray))
-print(s)
+    init(dataSize: Int, runCount: Int, algorithms: [SortingAlgorithm], dataTypes: [Data]) {
+        self.dataSize = dataSize
+        self.runCount = runCount
+        self.algorithms = algorithms
+        self.inputData = dataTypes
+    }
 
-//measureRuntime(of: reverseSortedArray.sorted(with: BogoSort()))
+    private func evaluatePerformance(forInput data: [Data.Element]) -> [TimeInterval] {
+        return algorithms.map { algorithm in
+            let (resultData, duration) = measureRuntime(of: algorithm.sort(data))
+            assert(resultData.isSorted(), "\(algorithm.name) failed to produce expected output data.")
+            return duration
+        }
+    }
+}
+
+let algorithms = [BubbleSort()]
+let dataTypes = [SortedData()]
+let rem = RuntimeEvaluationManager(dataSize: 50, runCount: 500, algorithms: algorithms, dataTypes: dataTypes)
