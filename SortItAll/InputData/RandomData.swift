@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct RandomData: InputData {
-    typealias Element = Int
-
-    let name = "Random"
-
-    func next(withSize size: Int) -> [Int] {
-        return (0..<size).shuffled()
+class RandomData<Element: BinaryInteger>: InputData<Element> where Element.Stride: SignedInteger {
+    init() {
+        super.init(name: "Sorted") { size in
+            return Array((0..<Element(size))).shuffled()
+        }
     }
 }

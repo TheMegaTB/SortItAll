@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct ReverseSortedData: InputData {
-    typealias Element = Int
-
-    let name = "ReverseSorted"
-
-    func next(withSize size: Int) -> [Int] {
-        return (0..<size).reversed()
+class ReverseSortedData<Element: BinaryInteger>: InputData<Element> where Element.Stride: SignedInteger {
+    init() {
+        super.init(name: "Sorted") { size in
+            return Array((0..<Element(size))).reversed()
+        }
     }
 }

@@ -8,21 +8,21 @@
 
 import Foundation
 
-class RuntimeEvaluationManager<Data: InputData> {
+class RuntimeEvaluationManager<Element: Comparable> {
     private let dataSize: Int
     private let runCount: Int
 
     private let algorithms: [SortingAlgorithm]
-    private let inputData: [Data]
+    private let inputData: [InputData<Element>]
 
-    init(dataSize: Int, runCount: Int, algorithms: [SortingAlgorithm], dataTypes: [Data]) {
+    init(dataSize: Int, runCount: Int, algorithms: [SortingAlgorithm], dataTypes: [InputData<Element>]) {
         self.dataSize = dataSize
         self.runCount = runCount
         self.algorithms = algorithms
         self.inputData = dataTypes
     }
 
-    private func evaluatePerformance(forInput data: [Data.Element]) -> [TimeInterval] {
+    private func evaluatePerformance(forInput data: [Element]) -> [TimeInterval] {
         return algorithms.map { algorithm in
             let (resultData, duration) = measureRuntime(of: algorithm.sort(data))
             assert(resultData.isSorted(), "\(algorithm.name) failed to produce expected output data.")
@@ -37,7 +37,7 @@ class RuntimeEvaluationManager<Data: InputData> {
     }
 }
 
-let algorithms = [BubbleSort()]
-let dataTypes = [ReverseSortedData()]
-let rem = RuntimeEvaluationManager(dataSize: 50, runCount: 500, algorithms: algorithms, dataTypes: dataTypes)
+let algorithms: [SortingAlgorithm] = [BubbleSort(), SelectionSort(), InsertionSort(), MergeSort()]
+let dataTypes: [InputData<Int>] = [ReverseSortedData(), SortedData(), RandomData()]
+let rem = RuntimeEvaluationManager(dataSize: 550, runCount: 500, algorithms: algorithms, dataTypes: dataTypes)
 rem.evaluate()

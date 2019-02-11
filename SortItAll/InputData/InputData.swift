@@ -8,10 +8,16 @@
 
 import Foundation
 
-protocol InputData {
-    associatedtype Element: Comparable
+class InputData<Element: Comparable> {
+    let name: String
+    private let generatorFunction: (Int) -> [Element]
 
-    var name: String { get }
+    init(name: String, generatorFunction: @escaping (Int) -> [Element]) {
+        self.name = name
+        self.generatorFunction = generatorFunction
+    }
 
-    func next(withSize size: Int) -> [Element]
+    func next(withSize size: Int) -> [Element] {
+        return generatorFunction(size)
+    }
 }
