@@ -16,7 +16,7 @@ numberFormatter.minimumIntegerDigits = 1
 numberFormatter.minimumFractionDigits = 8
 
 let algorithms: [SortingAlgorithm] = [QuickSort(), MergeSort(), InsertionSort(), SelectionSort(), BubbleSort()]
-let dataTypes: [InputData<Int>] = [ReverseSortedData(), RandomData(), SortedData()]
+let dataTypes: [InputData<Int>] = [ReverseSortedData(), RandomData(), SortedData(), AlmostSortedData()]
 
 let rem = RuntimeEvaluationManager(runCount: 3, algorithms: algorithms, dataTypes: dataTypes)
 
