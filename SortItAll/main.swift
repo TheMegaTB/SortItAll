@@ -8,16 +8,6 @@
 
 import Foundation
 
-//let algorithms: [SortingAlgorithm] = [BubbleSort(), SelectionSort(), InsertionSort(), MergeSort()]
-//let dataTypes: [InputData<Int>] = [SortedData(), RandomData(), ReverseSortedData()]
-//
-//let rem = RuntimeEvaluationManager(dataSize: 1000, runCount: 20, algorithms: algorithms, dataTypes: dataTypes)
-//let durations = rem.evaluate()
-//
-//let csvWriter = CSVWriter(columnNames: algorithms.map { $0.name }, rowNames: dataTypes.map { $0.name }, data: durations)
-//csvWriter.numberFormatter.minimumIntegerDigits = 1
-//csvWriter.numberFormatter.minimumFractionDigits = 8
-
 let targetLocation = URL(fileURLWithPath: NSHomeDirectory())
     .appendingPathComponent("Downloads")
     .appendingPathComponent("sorting.csv")
@@ -28,15 +18,9 @@ numberFormatter.minimumFractionDigits = 8
 let algorithms: [SortingAlgorithm] = [MergeSort(), InsertionSort(), SelectionSort(), BubbleSort()]
 let dataTypes: [InputData<Int>] = [ReverseSortedData(), RandomData(), SortedData()]
 
-let rem = RuntimeEvaluationManager(runCount: 5, algorithms: algorithms, dataTypes: dataTypes)
+let rem = RuntimeEvaluationManager(runCount: 3, algorithms: algorithms, dataTypes: dataTypes)
 
-//let csvWriter = CSVWriter(columnNames: algorithms.map { $0.name },
-//                          rowNames: dataTypes.map { $0.name },
-//                          data: rem.evaluate())
-//csvWriter.numberFormatter = numberFormatter
-//try! csvWriter.write(to: targetLocation)
-
-let sizes = (1...50).map { $0 * 60 }
+let sizes = (1...50).map { $0 * 100 }
 
 // x = [InputSize: [InputType: [Algorithm: Duration]]]
 let x = rem.evaluate(sizes: sizes)
