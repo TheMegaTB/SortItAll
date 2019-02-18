@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RuntimeEvaluationManager<Element: Comparable> {
+final class RuntimeEvaluationManager<Element: Comparable> {
     private let runCount: Int
 
     private let algorithms: [SortingAlgorithm]
@@ -20,7 +20,7 @@ class RuntimeEvaluationManager<Element: Comparable> {
         self.inputData = dataTypes
     }
 
-    private func evaluatePerformance(forInput data: [Element]) -> [TimeInterval] {
+    final private func evaluatePerformance(forInput data: [Element]) -> [TimeInterval] {
         return algorithms.map { algorithm in
 //            print("\t\t\(algorithm.name)")
             var copy = data
@@ -30,7 +30,7 @@ class RuntimeEvaluationManager<Element: Comparable> {
         }
     }
 
-    private func evaluateAveragePerformance(forInput data: InputData<Element>, withSize dataSize: Int) -> [TimeInterval] {
+    final private func evaluateAveragePerformance(forInput data: InputData<Element>, withSize dataSize: Int) -> [TimeInterval] {
         let cumulatedPerformance = (0..<runCount).reduce(Array(repeating: 0.0, count: algorithms.count)) { acc, i in
 //            print("\tRun #\(i)")
             let performances = evaluatePerformance(forInput: data.next(withSize: dataSize))
@@ -40,14 +40,14 @@ class RuntimeEvaluationManager<Element: Comparable> {
         return cumulatedPerformance.map { $0 / Double(runCount) }
     }
 
-    func evaluate(withSize dataSize: Int) -> [[TimeInterval]] {
+    final func evaluate(withSize dataSize: Int) -> [[TimeInterval]] {
         return inputData.map { data in
 //            print("Evaluating performance on InputSet \(data.name)")
             return evaluateAveragePerformance(forInput: data, withSize: dataSize)
         }
     }
 
-    func evaluate(sizes: [Int], runnerCount: Int = 4) -> [[[TimeInterval]]] {
+    final func evaluate(sizes: [Int], runnerCount: Int = 4) -> [[[TimeInterval]]] {
         let group = DispatchGroup()
         var processedSizes = 0
         var results: [[[TimeInterval]]] = Array(repeating: [], count: sizes.count)

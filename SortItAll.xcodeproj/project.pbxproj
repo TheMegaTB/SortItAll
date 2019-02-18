@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303E76EA221AC291003CB3BB /* NativeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E76E9221AC291003CB3BB /* NativeSort.swift */; };
 		30AE56ED22118AC50062CCCF /* BogoSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56EC22118AC50062CCCF /* BogoSort.swift */; };
 		30AE56F122118E880062CCCF /* TimeInterval+HumanReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56F022118E880062CCCF /* TimeInterval+HumanReadable.swift */; };
 		30AE56F42211924C0062CCCF /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE56F32211924C0062CCCF /* InputData.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		303E76E9221AC291003CB3BB /* NativeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSort.swift; sourceTree = "<group>"; };
 		307EC158221AAEF00078E081 /* Experimentation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Experimentation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		30AE56DA221187120062CCCF /* SortItAll */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SortItAll; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AE56DD221187120062CCCF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				40B024F4221190B9004F735B /* InsertionSort.swift */,
 				40B024F62211919A004F735B /* MergeSort.swift */,
 				40B024FA2211C185004F735B /* QuickSort.swift */,
+				303E76E9221AC291003CB3BB /* NativeSort.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303E76EA221AC291003CB3BB /* NativeSort.swift in Sources */,
 				30AE56FC2211A92E0062CCCF /* Array+IsSorted.swift in Sources */,
 				30AE56FD2211A92E0062CCCF /* main.swift in Sources */,
 				30AE57002211AB770062CCCF /* Array+AddElements.swift in Sources */,

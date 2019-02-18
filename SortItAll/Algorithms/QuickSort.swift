@@ -12,15 +12,15 @@ struct QuickSort: SortingAlgorithm {
     let name = "QuickSort"
 
     func sort<Element: Comparable>(_ array: inout [Element]) {
-        sortSlice(&array[0...])
-    }
+        var ranges: [Range<Int>] = [0..<array.count]
 
-    func sortSlice<Element: Comparable>(_ slice: inout ArraySlice<Element>) {
-        if slice.count > 1 {
-            let index = partition(&slice)
+        while let range = ranges.popLast() {
+            if range.count > 1 {
+                let index = partition(&array[range])
 
-            sortSlice(&slice[..<index])
-            sortSlice(&slice[(index + 1)...])
+                ranges.append(range.startIndex..<index)
+                ranges.append(index+1..<range.endIndex)
+            }
         }
     }
 
