@@ -24,6 +24,7 @@
 		40B024F322118FE9004F735B /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024F222118FE9004F735B /* SelectionSort.swift */; };
 		40B024F5221190B9004F735B /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024F4221190B9004F735B /* InsertionSort.swift */; };
 		40B024F72211919A004F735B /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024F62211919A004F735B /* MergeSort.swift */; };
+		40B024FB2211C185004F735B /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B024FA2211C185004F735B /* QuickSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		40B024F222118FE9004F735B /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
 		40B024F4221190B9004F735B /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		40B024F62211919A004F735B /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		40B024FA2211C185004F735B /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				40B024F222118FE9004F735B /* SelectionSort.swift */,
 				40B024F4221190B9004F735B /* InsertionSort.swift */,
 				40B024F62211919A004F735B /* MergeSort.swift */,
+				40B024FA2211C185004F735B /* QuickSort.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				40B024F5221190B9004F735B /* InsertionSort.swift in Sources */,
 				40B024F72211919A004F735B /* MergeSort.swift in Sources */,
 				40B024F322118FE9004F735B /* SelectionSort.swift in Sources */,
+				40B024FB2211C185004F735B /* QuickSort.swift in Sources */,
 				30AE56ED22118AC50062CCCF /* BogoSort.swift in Sources */,
 				30AE56F82211945E0062CCCF /* ReverseSortedData.swift in Sources */,
 				30AE56F42211924C0062CCCF /* InputData.swift in Sources */,
